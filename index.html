@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<!-- title -->
+	  	<title>JavaScript form validation - checking email</title>  
+
+	  	<!-- bootstrap css -->
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	  	<!-- custom css -->
+	  	<link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    	<div class="container">
+    		<div class="col-sm-6 col-sm-offset-3">
+		    	<div class="mail">
+		    		<h2>Input and email and submit</h2>
+		    		<form name="form1">
+					  	<div class="form-group">
+					    	<label for="email1">Email address</label>
+					    	<input type="email" class="form-control" name="email1" placeholder="Email">
+					    </div>
+					    <button type="submit" onclick="validateEmail(document.form1.email1)" class="btn btn-default">Submit</button>
+					</form>
+		    	</div>
+	    	</div>
+	    </div>
+
+    	<script src="js/main.js"></script>
+    </body>
+</html>
