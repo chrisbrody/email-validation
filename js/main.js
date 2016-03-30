@@ -14,23 +14,51 @@
 // +	The + sign specifies that the above sub-expression shall occur one or more times, e.g., .com, .co.us, .edu.uk etc.
 // $	Matches the end of the string or line.
 
+/*
+	ON CLICK HTML EVENT
+*/ 
+// function validateEmail(inputEmail) {
+// 	// email validation
+// 	var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+// 	// user data
+// 	var userEmail = inputEmail
+// 	// if user data passes email validation, do this
+// 	if( userEmail.value.match(mailFormat) ) {
+// 		document.form1.email1.focus()
+// 		alert('email valid and ready to send')
+// 		return true
+// 	} else {
+// 		alert("You have entered an invalid email address!");  
+// 		document.form1.email1.focus();  
+// 		return false;  
+// 	}
+// }
+
+
+/*
+	DOM EVENT LISTENER
+*/ 
+var x = document.getElementById('validateBtn')
+
 function validateEmail(inputEmail) {
 	// email validation
 	var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-	// user data
-	var userEmail = inputEmail
+	// user email
+	var userEmail = inputEmail.email1
 	// if user data passes email validation, do this
 	if( userEmail.value.match(mailFormat) ) {
-		document.form1.email1.focus()
+		userEmail.focus()
 		alert('email valid and ready to send')
 		return true
 	} else {
-		alert("You have entered an invalid email address!");  
-		document.form1.email1.focus();  
-		return false;  
+		alert("You have entered an invalid email address!")
+		userEmail.focus() 
+		return false
 	}
 }
-
+x.addEventListener('click', function() {
+	validateEmail(document.form1)
+}, false)
 
 
 
